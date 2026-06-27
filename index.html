@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it" class="no-js">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hair Glamour Santina — Parrucchiere a Mortara | Capelli ricci & spose</title>
 <meta name="description" content="Hair Glamour Santina, parrucchiere a Mortara (PV): specialista in capelli ricci e acconciature da sposa. 5.0★ su 32 recensioni. Prenota: 347 493 5710.">
 <meta name="theme-color" content="#3a0f2e">
+<!-- Progressive enhancement: contenuto visibile di default, animazioni solo con JS -->
+<script>document.documentElement.className=document.documentElement.className.replace('no-js','js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -358,6 +360,29 @@
   footer a{color:var(--gold-soft);text-decoration:none}
   footer a:hover{text-decoration:underline}
   .foot-credit{font-size:.78rem;color:#8a6478;width:100%;text-align:center;margin-top:.4rem}
+  /* ===== Scroll reveal — concept "glamour": entrata con leggera rotazione e scala ===== */
+  @media(prefers-reduced-motion:no-preference){
+    .js .reveal{opacity:0;transform:translateY(26px) rotate(-1.2deg) scale(.985);transition:opacity .8s cubic-bezier(.2,.7,.3,1),transform .8s cubic-bezier(.2,.7,.3,1)}
+    .js .reveal.in{opacity:1;transform:none}
+    /* curve/spirali animate: deriva lenta e glamour della spirale dell'hero */
+    .spiral{transform-origin:center;animation:spiralDrift 16s ease-in-out infinite alternate}
+    @keyframes spiralDrift{from{transform:translateY(0) rotate(0deg)}to{transform:translateY(-14px) rotate(3deg)}}
+  }
+
+  /* ===== Sezione video — dettaglio strumenti, cornice prugna/oro ===== */
+  .toolfx{background:linear-gradient(180deg,var(--cream) 0%,#ffffff 100%)}
+  .toolfx-grid{display:grid;gap:2rem;align-items:center;grid-template-columns:1fr}
+  .toolfx-copy h2{font-family:"Fraunces",Georgia,serif;font-size:clamp(2rem,5vw,3rem);color:var(--plum-800);margin:.6rem 0 .6rem}
+  .toolfx-copy p{color:#7a5a6d;max-width:48ch;margin:0}
+  .toolfx-kicker{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--magenta)}
+  .toolfx-media{position:relative;border-radius:22px;overflow:hidden;padding:10px;
+    background:linear-gradient(135deg,var(--plum-800),var(--magenta) 70%,var(--magenta-bright));
+    box-shadow:var(--shadow);border:1px solid rgba(217,164,65,.55)}
+  .toolfx-media video{display:block;width:100%;height:auto;border-radius:14px;background:var(--plum-800)}
+  .toolfx-media::after{content:"";position:absolute;inset:10px;border-radius:14px;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(233,200,120,.55)}
+  .toolfx-cap{display:flex;align-items:center;gap:.55rem;margin-top:.8rem;font-size:.85rem;color:var(--magenta);font-weight:700}
+  .toolfx-cap .dot{width:9px;height:9px;border-radius:50%;background:var(--gold-soft)}
+  @media(min-width:820px){.toolfx-grid{grid-template-columns:1.05fr 1.1fr;gap:3rem}}
 </style>
 </head>
 <body>
@@ -507,6 +532,23 @@
         <p>Ti ascoltiamo prima di iniziare: consigli su taglio, colore e gestione quotidiana pensati solo per te.</p>
       </article>
     </div>
+  </div>
+</section>
+
+<!-- ============ DETTAGLIO VIDEO ============ -->
+<section class="toolfx" aria-labelledby="toolfx-title">
+  <div class="wrap toolfx-grid">
+    <div class="toolfx-copy reveal">
+      <span class="toolfx-kicker">✦ Il dettaglio</span>
+      <h2 id="toolfx-title">L'arte è nei dettagli</h2>
+      <p>Forbici e pettine, in continuo movimento, come le mani di Santina: precisione, carattere e una cura che si vede in ogni piega e in ogni acconciatura da sposa.</p>
+    </div>
+    <figure class="toolfx-media reveal">
+      <video muted loop playsinline preload="metadata" poster="tools.jpg" aria-label="Forbici e pettine professionali che ruotano lentamente, toni prugna e oro">
+        <source src="tools.mp4" type="video/mp4">
+      </video>
+      <figcaption class="toolfx-cap"><span class="dot" aria-hidden="true"></span> Specialista capelli ricci &amp; spose</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -666,5 +708,33 @@
   </div>
 </footer>
 
+<script>
+/* Paracadute: il JS aggiunge LUI la classe .reveal → senza JS tutto resta visibile. */
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce && 'IntersectionObserver' in window){
+    var targets = document.querySelectorAll('.section-head, .card, .toolfx-copy, .toolfx-media, .about .ph, .about > .wrap > .about-grid > div, .hours-card, .map-ph, .loc-card');
+    targets.forEach(function(el){ el.classList.add('reveal'); });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          var sib = en.target.parentElement ? Array.prototype.indexOf.call(en.target.parentElement.children, en.target) : 0;
+          en.target.style.transitionDelay = Math.min(sib,5)*80 + 'ms';
+          en.target.classList.add('in'); io.unobserve(en.target);
+        }
+      });
+    },{threshold:.16, rootMargin:'0px 0px -8% 0px'});
+    targets.forEach(function(el){ io.observe(el); });
+  }
+  /* Video: play solo quando visibile */
+  if(!reduce && 'IntersectionObserver' in window){
+    var vio = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ var v=en.target;
+        if(en.isIntersecting){var p=v.play(); if(p&&p.catch)p.catch(function(){});} else { v.pause(); } });
+    },{threshold:.35});
+    document.querySelectorAll('.toolfx-media video').forEach(function(v){ vio.observe(v); });
+  }
+})();
+</script>
 </body>
 </html>
