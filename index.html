@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hair Glamour Santina — Parrucchiere a Mortara | Capelli ricci & spose</title>
+<meta name="description" content="Hair Glamour Santina, parrucchiere a Mortara (PV): specialista in capelli ricci e acconciature da sposa. 5.0★ su 32 recensioni. Prenota: 347 493 5710.">
+<meta name="theme-color" content="#3a0f2e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plum-900:#2a0a20;
+    --plum-800:#3a0f2e;
+    --plum-700:#4e1540;
+    --magenta:#b01267;
+    --magenta-bright:#d6266f;
+    --gold:#d9a441;
+    --gold-soft:#e9c878;
+    --cream:#fbf3ec;
+    --cream-2:#f5e6dc;
+    --ink:#2a0a20;
+    --text-on-dark:#f6e8df;
+    --muted-on-dark:#d8b8cd;
+    --radius:20px;
+    --maxw:1120px;
+    --shadow:0 18px 50px -22px rgba(42,10,32,.55);
+    font-synthesis-weight:none;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  }
+  body{
+    margin:0;
+    font-family:"Manrope",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{
+    font-family:"Fraunces","Georgia",serif;
+    line-height:1.05;
+    margin:0;
+    font-weight:600;
+    letter-spacing:-.01em;
+  }
+  p{margin:0}
+  a{color:inherit}
+  img{max-width:100%}
+
+  .wrap{width:min(100% - 2.4rem,var(--maxw));margin-inline:auto}
+
+  /* Focus visibility */
+  a:focus-visible,button:focus-visible{
+    outline:3px solid var(--gold);
+    outline-offset:3px;
+    border-radius:6px;
+  }
+
+  /* Skip link */
+  .skip{
+    position:absolute;left:-999px;top:0;z-index:200;
+    background:var(--gold);color:var(--plum-900);
+    padding:.7rem 1.1rem;border-radius:0 0 12px 0;font-weight:700;
+  }
+  .skip:focus{left:0}
+
+  /* ---- Buttons ---- */
+  .btn{
+    display:inline-flex;align-items:center;gap:.55rem;
+    font-weight:700;font-size:1rem;
+    padding:.92rem 1.45rem;border-radius:999px;
+    text-decoration:none;border:2px solid transparent;cursor:pointer;
+    transition:transform .18s ease,box-shadow .18s ease,background .18s ease,color .18s ease;
+    line-height:1;
+  }
+  .btn svg{width:1.15em;height:1.15em;flex:none}
+  .btn-gold{background:linear-gradient(135deg,var(--gold-soft),var(--gold));color:var(--plum-900);box-shadow:0 10px 24px -10px rgba(217,164,65,.8)}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(217,164,65,.95)}
+  /* WhatsApp coerente con la palette prugna/magenta; la riconoscibilità resta nell'icona WA */
+  .btn-wa{background:linear-gradient(135deg,#c11d77,#7d0f4b);color:#fff;border-color:transparent}
+  .btn-wa:hover{transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(176,18,103,.75)}
+  .btn-wa svg{width:1.32em;height:1.32em}
+  .btn-ghost{background:transparent;border-color:var(--gold);color:var(--gold-soft)}
+  .btn-ghost:hover{background:rgba(217,164,65,.14);transform:translateY(-2px)}
+  .btn-ghost-dark{background:transparent;border-color:var(--magenta);color:var(--magenta)}
+  .btn-ghost-dark:hover{background:rgba(176,18,103,.08);transform:translateY(-2px)}
+
+  /* ---- Curl motif (reusable) ---- */
+  .curl{display:inline-block;color:var(--gold)}
+  .curl svg{display:block}
+
+  /* ---- Header ---- */
+  .site-head{
+    position:sticky;top:0;z-index:100;
+    background:rgba(42,10,32,.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(217,164,65,.22);
+  }
+  .site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 0}
+  .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--text-on-dark)}
+  .brand .mark{width:38px;height:38px;flex:none}
+  .brand b{font-family:"Fraunces",serif;font-weight:600;font-size:1.12rem;letter-spacing:-.01em;line-height:1.05}
+  .brand span{display:block;font-family:"Manrope";font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft);font-weight:600}
+  .head-cta{display:none}
+  @media(min-width:760px){.head-cta{display:inline-flex}}
+
+  /* ---- Hero ---- */
+  .hero{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(120% 90% at 85% -10%,rgba(214,38,111,.55),transparent 55%),
+      radial-gradient(90% 80% at 8% 110%,rgba(217,164,65,.28),transparent 50%),
+      linear-gradient(160deg,var(--plum-900),var(--plum-800) 55%,var(--plum-700));
+    color:var(--text-on-dark);
+  }
+  .hero .wrap{position:relative;z-index:2;padding:clamp(3rem,7vw,5.5rem) 0 clamp(3rem,6vw,4.5rem)}
+  .hero-grid{display:grid;gap:clamp(2rem,5vw,3.5rem);align-items:center}
+  @media(min-width:920px){.hero-grid{grid-template-columns:1.05fr .95fr}}
+
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:.55rem;
+    font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;font-weight:700;
+    color:var(--gold-soft);
+    border:1px solid rgba(217,164,65,.4);border-radius:999px;
+    padding:.42rem .85rem;margin-bottom:1.4rem;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem,7.5vw,4.6rem);
+    margin-bottom:1.1rem;
+  }
+  .hero h1 .accent{
+    font-style:italic;font-weight:500;
+    background:linear-gradient(100deg,var(--gold-soft),var(--gold));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero .lede{font-size:clamp(1.05rem,2.4vw,1.28rem);color:var(--muted-on-dark);max-width:46ch;margin-bottom:1.8rem}
+
+  .rating{
+    display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;
+    margin-bottom:2rem;
+  }
+  .stars{display:inline-flex;gap:.12rem;color:var(--gold)}
+  .stars svg{width:1.25rem;height:1.25rem}
+  .rating b{font-size:1.15rem;font-family:"Fraunces",serif}
+  .rating .src{color:var(--muted-on-dark);font-size:.92rem}
+
+  .hero-cta{display:flex;flex-wrap:wrap;gap:.75rem}
+
+  /* Hero visual — placeholder + curl spiral */
+  .hero-visual{position:relative;min-height:min(78vw,440px)}
+  .ph{
+    position:relative;border-radius:var(--radius);overflow:hidden;
+    box-shadow:var(--shadow);
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    color:#fff;
+  }
+  /* Placeholder "gancio": gradiente brand + icona + "La tua foto qui" */
+  .ph-card{
+    position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:9px;
+    padding:20px 24px;border-radius:16px;max-width:84%;
+    background:rgba(20,4,15,.44);border:1.5px dashed rgba(255,255,255,.62);
+    -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);
+  }
+  .ph-card .ph-ic{width:40px;height:40px;color:#fff;opacity:.96}
+  .ph-card .ph-t{font-weight:700;font-size:1.08rem;color:#fff;letter-spacing:.01em}
+  .ph-card .ph-s{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.88)}
+  .ph.portrait{
+    aspect-ratio:4/5;
+    background:
+      radial-gradient(70% 50% at 30% 20%,rgba(233,200,120,.5),transparent 60%),
+      linear-gradient(150deg,#6a1a52,#9c1561 60%,#c0246c);
+  }
+  /* decorative curl spiral overlay */
+  .spiral{
+    position:absolute;inset:0;z-index:1;pointer-events:none;
+    opacity:.5;mix-blend-mode:screen;
+  }
+  .hero .floating-curl{
+    position:absolute;z-index:1;opacity:.5;color:var(--gold);
+    animation:bob 9s ease-in-out infinite;
+  }
+  .hero .fc1{top:6%;right:-2%;width:130px}
+  .hero .fc2{bottom:4%;left:-4%;width:100px;animation-delay:-3s;color:var(--magenta-bright);opacity:.45}
+  @keyframes bob{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(8deg)}}
+
+  /* ---- Section base ---- */
+  section{padding:clamp(3.2rem,7vw,5.5rem) 0}
+  .sec-head{max-width:60ch;margin-bottom:2.6rem}
+  .sec-head .kicker{
+    display:inline-flex;align-items:center;gap:.5rem;
+    font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;
+    color:var(--magenta);margin-bottom:.9rem;
+  }
+  .sec-head .kicker .curl{color:var(--gold)}
+  .sec-head h2{font-size:clamp(1.9rem,4.6vw,2.9rem)}
+  .sec-head h2 em{font-style:italic;color:var(--magenta);font-weight:500}
+  .sec-head p{margin-top:.9rem;color:#6b4258;font-size:1.06rem}
+
+  /* ---- Services ---- */
+  .services{background:var(--cream)}
+  .svc-grid{display:grid;gap:1.1rem}
+  @media(min-width:640px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:980px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+  .card{
+    position:relative;background:#fff;border-radius:var(--radius);
+    padding:1.6rem 1.5rem;border:1px solid #efdccf;
+    box-shadow:0 10px 30px -22px rgba(42,10,32,.4);
+    transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+    overflow:hidden;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 22px 42px -26px rgba(42,10,32,.55);border-color:var(--gold)}
+  .card .icn{
+    width:52px;height:52px;border-radius:14px;margin-bottom:1.05rem;
+    display:grid;place-items:center;color:#fff;
+    background:linear-gradient(135deg,var(--magenta),var(--plum-700));
+  }
+  .card .icn svg{width:26px;height:26px}
+  .card h3{font-size:1.3rem;margin-bottom:.5rem}
+  .card p{color:#6b4258;font-size:.98rem}
+  .card.feature{
+    background:linear-gradient(160deg,var(--plum-800),var(--plum-700));
+    color:var(--text-on-dark);border-color:transparent;
+    grid-column:1/-1;
+  }
+  @media(min-width:980px){.card.feature{grid-column:span 1}}
+  .card.feature .icn{background:linear-gradient(135deg,var(--gold-soft),var(--gold));color:var(--plum-900)}
+  .card.feature h3{color:#fff}
+  .card.feature p{color:var(--muted-on-dark)}
+  .card .tag{
+    display:inline-block;margin-top:.9rem;font-size:.7rem;letter-spacing:.14em;
+    text-transform:uppercase;font-weight:700;color:var(--gold);
+    border:1px solid rgba(217,164,65,.5);border-radius:999px;padding:.28rem .7rem;
+  }
+  .card.feature::after{
+    content:"";position:absolute;right:-40px;bottom:-40px;width:160px;height:160px;
+    background:radial-gradient(circle,rgba(217,164,65,.35),transparent 70%);
+  }
+
+  /* ---- About / Santina ---- */
+  .about{background:linear-gradient(180deg,var(--cream),var(--cream-2))}
+  .about-grid{display:grid;gap:clamp(2rem,5vw,3.2rem);align-items:center}
+  @media(min-width:880px){.about-grid{grid-template-columns:.9fr 1.1fr}}
+  .about .ph.square{
+    aspect-ratio:1/1;
+    background:
+      radial-gradient(60% 50% at 70% 25%,rgba(233,200,120,.55),transparent 60%),
+      linear-gradient(150deg,#7a1c5b,#4e1540);
+  }
+  .about h2{font-size:clamp(1.9rem,4.6vw,2.9rem);margin-bottom:1.1rem}
+  .about h2 em{font-style:italic;color:var(--magenta);font-weight:500}
+  .about p{color:#5e3a4f;font-size:1.07rem;margin-bottom:1.1rem;max-width:54ch}
+  .signature{
+    font-family:"Fraunces",serif;font-style:italic;font-size:1.7rem;
+    color:var(--magenta);margin-top:1.2rem;
+  }
+  .pillars{display:grid;gap:.8rem;margin-top:1.8rem}
+  @media(min-width:520px){.pillars{grid-template-columns:repeat(3,1fr)}}
+  .pillar{background:#fff;border:1px solid #efdccf;border-radius:14px;padding:1rem;text-align:center}
+  .pillar b{display:block;font-family:"Fraunces",serif;font-size:1.55rem;color:var(--magenta)}
+  .pillar span{font-size:.82rem;color:#6b4258;line-height:1.35;display:block;margin-top:.2rem}
+
+  /* ---- Hours ---- */
+  .hours{
+    background:linear-gradient(160deg,var(--plum-900),var(--plum-800));
+    color:var(--text-on-dark);
+    position:relative;overflow:hidden;
+  }
+  .hours .deco-curl{position:absolute;right:-30px;top:-30px;width:220px;color:var(--magenta-bright);opacity:.25;pointer-events:none}
+  .hours .sec-head .kicker{color:var(--gold-soft)}
+  .hours .sec-head h2{color:#fff}
+  .hours .sec-head h2 em{color:var(--gold-soft)}
+  .hours-grid{display:grid;gap:2.2rem;align-items:center}
+  @media(min-width:820px){.hours-grid{grid-template-columns:1.2fr .8fr}}
+  .hours-list{list-style:none;margin:0;padding:0;max-width:460px}
+  .hours-list li{
+    display:flex;justify-content:space-between;align-items:baseline;gap:1rem;
+    padding:.85rem 0;border-bottom:1px dashed rgba(217,164,65,.28);
+    font-size:1.05rem;
+  }
+  .hours-list .day{font-weight:600}
+  .hours-list .time{color:var(--gold-soft);font-family:"Fraunces",serif}
+  .hours-list .closed{color:var(--muted-on-dark);font-style:italic;font-family:"Manrope";font-size:.95rem}
+  .hours-box{
+    background:rgba(255,255,255,.05);border:1px solid rgba(217,164,65,.3);
+    border-radius:var(--radius);padding:1.6rem;
+  }
+  .hours-box h3{color:#fff;font-size:1.3rem;margin-bottom:.6rem}
+  .hours-box p{color:var(--muted-on-dark);font-size:.98rem;margin-bottom:1.2rem}
+
+  /* ---- Location ---- */
+  .location{background:var(--cream)}
+  .loc-grid{display:grid;gap:1.4rem}
+  @media(min-width:860px){.loc-grid{grid-template-columns:1fr 1fr}}
+  .map-ph{
+    border-radius:var(--radius);overflow:hidden;min-height:300px;
+    border:1px solid #efdccf;box-shadow:var(--shadow);
+    position:relative;display:flex;align-items:flex-end;
+    background:
+      linear-gradient(135deg,rgba(176,18,103,.12),rgba(217,164,65,.1)),
+      repeating-linear-gradient(0deg,#f0e4d9,#f0e4d9 1px,transparent 1px,transparent 26px),
+      repeating-linear-gradient(90deg,#f0e4d9,#f0e4d9 1px,transparent 1px,transparent 26px),
+      #f7ede4;
+  }
+  .map-pin{
+    position:absolute;top:42%;left:46%;transform:translate(-50%,-100%);
+    color:var(--magenta);filter:drop-shadow(0 6px 8px rgba(42,10,32,.35));
+  }
+  .map-pin svg{width:46px;height:46px}
+  .map-ph .ph-label{
+    position:relative;z-index:2;width:100%;padding:.7rem .9rem;
+    font-size:.78rem;font-weight:600;color:#5e3a4f;
+    background:linear-gradient(to top,rgba(251,243,236,.95),transparent);
+  }
+  .loc-card{
+    background:#fff;border:1px solid #efdccf;border-radius:var(--radius);
+    padding:1.8rem;box-shadow:0 10px 30px -24px rgba(42,10,32,.5);
+    display:flex;flex-direction:column;gap:1.1rem;
+  }
+  .loc-card h3{font-size:1.4rem}
+  .loc-line{display:flex;gap:.75rem;align-items:flex-start;color:#5e3a4f}
+  .loc-line svg{width:1.25rem;height:1.25rem;color:var(--magenta);flex:none;margin-top:.18rem}
+  .loc-line a{color:#5e3a4f;text-decoration:none;font-weight:600}
+  .loc-line a:hover{color:var(--magenta);text-decoration:underline}
+  .loc-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:.3rem}
+
+  /* ---- Contact / final CTA ---- */
+  .contact{
+    background:
+      radial-gradient(100% 90% at 80% 0%,rgba(214,38,111,.5),transparent 55%),
+      linear-gradient(150deg,var(--plum-800),var(--plum-900));
+    color:var(--text-on-dark);text-align:center;position:relative;overflow:hidden;
+  }
+  .contact .floating-curl{position:absolute;color:var(--gold);opacity:.3;pointer-events:none}
+  .contact .cc1{top:8%;left:6%;width:90px}
+  .contact .cc2{bottom:10%;right:7%;width:120px;color:var(--magenta-bright)}
+  .contact h2{font-size:clamp(2rem,5.5vw,3.3rem);margin-bottom:1rem;position:relative;z-index:2}
+  .contact h2 em{font-style:italic;color:var(--gold-soft);font-weight:500}
+  .contact p{color:var(--muted-on-dark);max-width:50ch;margin:0 auto 2rem;font-size:1.1rem;position:relative;z-index:2}
+  .contact-cta{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;position:relative;z-index:2}
+  .contact .phone-big{
+    display:block;font-family:"Fraunces",serif;font-size:clamp(1.8rem,5vw,2.6rem);
+    color:#fff;text-decoration:none;margin-bottom:1.6rem;position:relative;z-index:2;
+  }
+  .contact .phone-big:hover{color:var(--gold-soft)}
+
+  /* ---- Footer ---- */
+  footer{background:var(--plum-900);color:var(--muted-on-dark);padding:2.6rem 0;font-size:.92rem}
+  footer .wrap{display:flex;flex-wrap:wrap;gap:1.2rem;justify-content:space-between;align-items:center}
+  footer .brand b{color:var(--text-on-dark)}
+  footer a{color:var(--gold-soft);text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  .foot-credit{font-size:.78rem;color:#8a6478;width:100%;text-align:center;margin-top:.4rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Salta al contenuto</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Hair Glamour Santina — home">
+      <!-- curl mark -->
+      <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M24 4c-7 0-12 5-12 12 0 6 4 9 9 9 4 0 6-2 6-5 0-2-1-4-3-4-1.5 0-2.5 1-2.5 2.2 0 .9.6 1.6 1.4 1.6" stroke="#d9a441" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+        <path d="M24 44c7 0 12-5 12-12 0-6-4-9-9-9-4 0-6 2-6 5 0 2 1 4 3 4 1.5 0 2.5-1 2.5-2.2 0-.9-.6-1.6-1.4-1.6" stroke="#d6266f" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span style="line-height:1">
+        <b>Hair Glamour Santina</b>
+        <span>Parrucchiere · Mortara</span>
+      </span>
+    </a>
+    <a class="btn btn-gold head-cta" href="tel:+393474935710">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2Z"/></svg>
+      347 493 5710
+    </a>
+  </div>
+</header>
+
+<main id="main">
+<a id="top"></a>
+
+<!-- ============ HERO ============ -->
+<section class="hero" aria-labelledby="hero-title">
+  <!-- floating decorative curls -->
+  <svg class="floating-curl fc1" viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M50 8c-16 0-28 12-28 28 0 14 9 22 21 22 9 0 15-5 15-12 0-5-3-9-8-9-3 0-6 2-6 5" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+  <svg class="floating-curl fc2" viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M50 8c-16 0-28 12-28 28 0 14 9 22 21 22 9 0 15-5 15-12 0-5-3-9-8-9-3 0-6 2-6 5" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">
+          <span class="curl" aria-hidden="true">✦</span>
+          Specialista capelli ricci &amp; spose
+        </span>
+        <h1 id="hero-title">Il tuo <span class="accent">riccio</span>, la tua firma di stile</h1>
+        <p class="lede">Nel cuore di Mortara, Santina trasforma ogni testa di capelli in un'opera su misura — con la cura personale di chi ti conosce per nome.</p>
+
+        <div class="rating">
+          <span class="stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7L12 2z"/></svg>
+          </span>
+          <b>5.0</b>
+          <span class="src">su Google · 32 recensioni</span>
+        </div>
+
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="tel:+393474935710">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2Z"/></svg>
+            Chiama ora
+          </a>
+          <a class="btn btn-wa" href="https://wa.me/393474935710" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.2.5.4.1.2.1.9-.1 1.5z"/></svg>
+            WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=Corso%20Giuseppe%20Mazzini%2033%2C%2027036%20Mortara%20PV" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+            Come arrivare
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <svg class="spiral" viewBox="0 0 400 500" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M-20 420 C120 360 90 240 200 250 C310 260 280 120 200 130 C150 136 160 200 210 196" stroke="#e9c878" stroke-width="3" fill="none" opacity=".7"/>
+          <path d="M60 500 C200 440 170 320 280 330 C360 338 340 220 270 224" stroke="#d6266f" stroke-width="3" fill="none" opacity=".6"/>
+        </svg>
+        <div class="ph portrait" role="img" aria-label="La tua foto qui — foto del salone Hair Glamour Santina da inserire">
+          <div class="ph-card">
+            <svg class="ph-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7H7l1.3-1.8h7.4L17 7h2.5A1.5 1.5 0 0 1 21 8.5v9A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="13" r="3.3"/></svg>
+            <span class="ph-t">La tua foto qui</span>
+            <span class="ph-s">Foto del salone</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" aria-labelledby="svc-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span class="curl" aria-hidden="true">✦</span> I nostri servizi</span>
+      <h2 id="svc-title">Tagli, colore e <em>acconciature</em> pensati per te</h2>
+      <p>Una specializzazione vera sui capelli ricci e un'esperienza dedicata alle spose, con la stessa attenzione per ogni cliente che varca la porta.</p>
+    </div>
+
+    <div class="svc-grid">
+      <article class="card feature">
+        <div class="icn" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3c-3 0-5 2-5 5 0 3 2 4 4 4 1.5 0 2.5-1 2.5-2.3"/><path d="M12 21c3 0 5-2 5-5 0-3-2-4-4-4-1.5 0-2.5 1-2.5 2.3"/></svg>
+        </div>
+        <h3>Specialista capelli ricci</h3>
+        <p>Tagli studiati sulla forma del riccio, definizione e cura: il tuo riccio valorizzato come merita, ciocca dopo ciocca.</p>
+        <span class="tag">La nostra firma</span>
+      </article>
+
+      <article class="card">
+        <div class="icn" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2 5 5 .5-3.8 3.4 1.2 5L12 18.5 7.6 20.9l1.2-5L5 12.5 10 12z"/></svg>
+        </div>
+        <h3>Acconciature da sposa</h3>
+        <p>Lo styling del giorno più importante, costruito insieme: prova, dettagli e tenuta perfetta dall'inizio alla fine.</p>
+        <span class="tag">Su appuntamento</span>
+      </article>
+
+      <article class="card">
+        <div class="icn" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4.5l5 5L9 20H4v-5z"/><path d="M12 7l5 5"/></svg>
+        </div>
+        <h3>Taglio &amp; piega</h3>
+        <p>Linee che seguono il tuo viso e il tuo stile di vita, con una piega che dura e si rifà facilmente a casa.</p>
+      </article>
+
+      <article class="card">
+        <div class="icn" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l1 4-4 14-4-14z"/><path d="M8 7h8"/></svg>
+        </div>
+        <h3>Colore &amp; riflessi</h3>
+        <p>Colorazioni, schiariture e riflessi calibrati sulla tua base, per un risultato luminoso e naturale.</p>
+      </article>
+
+      <article class="card">
+        <div class="icn" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12c4-6 12-6 16 0-4 6-12 6-16 0z"/><circle cx="12" cy="12" r="2"/></svg>
+        </div>
+        <h3>Trattamenti &amp; cura</h3>
+        <p>Trattamenti ricostruttivi e idratanti per capelli sani, morbidi e pieni di vitalità tutto l'anno.</p>
+      </article>
+
+      <article class="card">
+        <div class="icn" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg>
+        </div>
+        <h3>Consulenza personale</h3>
+        <p>Ti ascoltiamo prima di iniziare: consigli su taglio, colore e gestione quotidiana pensati solo per te.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT / SANTINA ============ -->
+<section class="about" aria-labelledby="about-title">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="ph square" role="img" aria-label="La tua foto qui — foto di Santina da inserire">
+        <div class="ph-card">
+          <svg class="ph-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.5A1.5 1.5 0 0 1 4.5 7H7l1.3-1.8h7.4L17 7h2.5A1.5 1.5 0 0 1 21 8.5v9A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5z"/><circle cx="12" cy="13" r="3.3"/></svg>
+          <span class="ph-t">La tua foto qui</span>
+          <span class="ph-s">Foto di Santina</span>
+        </div>
+      </div>
+      <div>
+        <span class="kicker" style="display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--magenta);margin-bottom:.9rem"><span class="curl" aria-hidden="true">✦</span> Chi siamo</span>
+        <h2 id="about-title">Santina, e un rapporto che <em>dura nel tempo</em></h2>
+        <p>Hair Glamour Santina non è solo un salone: è il posto dove ti senti a casa. Santina mette nel suo lavoro passione, esperienza e un'attenzione sincera, perché ogni cliente è una persona da conoscere — non una poltrona da riempire.</p>
+        <p>È questa fiducia, costruita appuntamento dopo appuntamento, che fa tornare le clienti e che si legge nelle recensioni: cura dei dettagli, ascolto e risultati che parlano da soli.</p>
+        <p class="signature">— Santina</p>
+
+        <div class="pillars">
+          <div class="pillar"><b>5.0★</b><span>su 32 recensioni Google</span></div>
+          <div class="pillar"><b>Ricci</b><span>la nostra specialità</span></div>
+          <div class="pillar"><b>Spose</b><span>il tuo grande giorno</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOURS ============ -->
+<section class="hours" aria-labelledby="hours-title">
+  <svg class="deco-curl" viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M50 8c-16 0-28 12-28 28 0 14 9 22 21 22 9 0 15-5 15-12 0-5-3-9-8-9-3 0-6 2-6 5" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span class="curl" aria-hidden="true">✦</span> Quando trovarci</span>
+      <h2 id="hours-title">Orari di <em>apertura</em></h2>
+    </div>
+    <div class="hours-grid">
+      <ul class="hours-list">
+        <li><span class="day">Martedì</span> <span class="time">9:00 – 19:30</span></li>
+        <li><span class="day">Mercoledì</span> <span class="time">9:00 – 19:30</span></li>
+        <li><span class="day">Giovedì</span> <span class="time">9:00 – 19:30</span></li>
+        <li><span class="day">Venerdì</span> <span class="time">9:00 – 19:30</span></li>
+        <li><span class="day">Sabato</span> <span class="time">9:00 – 19:30</span></li>
+        <li><span class="day">Domenica</span> <span class="closed">Chiuso</span></li>
+        <li><span class="day">Lunedì</span> <span class="closed">Chiuso</span></li>
+      </ul>
+      <div class="hours-box">
+        <h3>Prenota il tuo posto</h3>
+        <p>Per evitare attese, ti consigliamo di prenotare. Bastano una telefonata o un messaggio.</p>
+        <div style="display:flex;flex-direction:column;gap:.7rem">
+          <a class="btn btn-gold" href="tel:+393474935710">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2Z"/></svg>
+            347 493 5710
+          </a>
+          <a class="btn btn-wa" href="https://wa.me/393474935710" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.2.5.4.1.2.1.9-.1 1.5z"/></svg>
+            Scrivici su WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section class="location" aria-labelledby="loc-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker"><span class="curl" aria-hidden="true">✦</span> Dove siamo</span>
+      <h2 id="loc-title">Nel centro di <em>Mortara</em></h2>
+    </div>
+    <div class="loc-grid">
+      <div class="map-ph" role="img" aria-label="Mappa stilizzata della posizione del salone in Corso Giuseppe Mazzini 33, Mortara">
+        <span class="map-pin" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        </span>
+        <span class="ph-label">Mappa illustrativa — Corso G. Mazzini 33, Mortara (PV)</span>
+      </div>
+      <div class="loc-card">
+        <h3>Hair Glamour Santina</h3>
+        <div class="loc-line">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          <span>Corso Giuseppe Mazzini 33<br>27036 Mortara (PV)</span>
+        </div>
+        <div class="loc-line">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2Z"/></svg>
+          <a href="tel:+393474935710">347 493 5710</a>
+        </div>
+        <div class="loc-line">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 8v4l3 2"/><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          <span>Mar–Sab 9:00–19:30 · Dom e Lun chiuso</span>
+        </div>
+        <div class="loc-actions">
+          <a class="btn btn-ghost-dark" href="https://www.google.com/maps/dir/?api=1&destination=Corso%20Giuseppe%20Mazzini%2033%2C%2027036%20Mortara%20PV" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+            Come arrivare
+          </a>
+          <a class="btn btn-wa" href="https://wa.me/393474935710" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.2.5.4.1.2.1.9-.1 1.5z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / FINAL CTA ============ -->
+<section class="contact" aria-labelledby="contact-title">
+  <svg class="floating-curl cc1" viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M50 8c-16 0-28 12-28 28 0 14 9 22 21 22 9 0 15-5 15-12 0-5-3-9-8-9-3 0-6 2-6 5" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+  <svg class="floating-curl cc2" viewBox="0 0 100 100" fill="none" aria-hidden="true"><path d="M50 8c-16 0-28 12-28 28 0 14 9 22 21 22 9 0 15-5 15-12 0-5-3-9-8-9-3 0-6 2-6 5" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+  <div class="wrap">
+    <h2 id="contact-title">Pronta a dare carattere ai tuoi <em>capelli</em>?</h2>
+    <p>Chiama o scrivici: Santina ti aspetta in Corso Giuseppe Mazzini 33, a Mortara.</p>
+    <a class="phone-big" href="tel:+393474935710">347 493 5710</a>
+    <div class="contact-cta">
+      <a class="btn btn-gold" href="tel:+393474935710">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.2 2.2Z"/></svg>
+        Chiama ora
+      </a>
+      <a class="btn btn-wa" href="https://wa.me/393474935710" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.4.1.6-.1l.8-1c.2-.2.4-.2.6-.1l1.8.9c.3.1.5.2.5.4.1.2.1.9-.1 1.5z"/></svg>
+        Scrivi su WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=Corso%20Giuseppe%20Mazzini%2033%2C%2027036%20Mortara%20PV" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        Come arrivare
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <path d="M24 4c-7 0-12 5-12 12 0 6 4 9 9 9 4 0 6-2 6-5 0-2-1-4-3-4-1.5 0-2.5 1-2.5 2.2 0 .9.6 1.6 1.4 1.6" stroke="#d9a441" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+        <path d="M24 44c7 0 12-5 12-12 0-6-4-9-9-9-4 0-6 2-6 5 0 2 1 4 3 4 1.5 0 2.5-1 2.5-2.2 0-.9-.6-1.6-1.4-1.6" stroke="#d6266f" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+      </svg>
+      <span style="line-height:1">
+        <b>Hair Glamour Santina</b>
+        <span>Corso G. Mazzini 33 · Mortara (PV)</span>
+      </span>
+    </a>
+    <div style="text-align:right">
+      <a href="tel:+393474935710">347 493 5710</a><br>
+      <span>Mar–Sab 9:00–19:30 · Dom e Lun chiuso</span>
+    </div>
+    <!-- BEGIN nota anteprima SC Web (rimuovibile) -->
+    <p class="foot-credit">Anteprima realizzata da SC Web</p>
+    <!-- END nota anteprima SC Web -->
+  </div>
+</footer>
+
+</body>
+</html>
